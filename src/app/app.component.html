@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap-ANGULAR</title>
+</head>
+
+<body>
+  <div class="container">
+    <table class="table table-dark">
+      <thead *ngFor="let headTable of headTables">
+        <tr>
+          <th class="col-md">{{headTable.id}}</th>
+          <th class="col-md-5 name">{{headTable.name}}
+            <input type="text" class="input__name" placeholder="Digite el Nombre">
+          </th>
+          <th class="col-md-2">{{headTable.careerPresent}}</th>
+          <th class="col-md-2">{{headTable.careerFuture}}</th>
+          <th class="col-md-1">{{headTable.numberComparation}}</th>
+          <th class="col-md-1">{{headTable.percent}}</th>
+          <th class="col-md-1">{{headTable.total}}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>
+            <select>
+              <option>Trainee</option>
+              <option>Junior</option>
+              <option>Mid Senior</option>
+              <option>Senior</option>
+              <option>Senior Advance</option>
+              <option>Principal</option>
+            </select>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let requirement of requirements; let i = index">
+          <td>{{idRequirements[i]}}</td>
+          <td>{{requirement}}</td>
+          <td><input type="text" placeholder=""></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>contenido</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><strong class="subTitules">Soft Skills</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr *ngFor="let softSkill of softSkills; let i = index">
+          <td>{{idSofts[i]}}</td>
+          <td>{{softSkill}}</td>
+          <td>*******</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>contenido</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><strong class="subTitules">Tech Skills</strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr *ngFor="let techSkill of techSkills; let i = index">
+          <td>{{idTechs[i]}}</td>
+          <td>{{techSkill}}</td>
+          <td>///////////</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>contenido</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
